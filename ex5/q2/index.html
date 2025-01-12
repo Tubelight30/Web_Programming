@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My House with SVG</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        #left-panel {
+            width: 30%;
+            border-right: 1px solid black;
+        }
+
+        iframe {
+            border: none;
+            width: 400px;
+            height: 400px;
+        }
+        h1 {
+            text-align: center;
+        }                                                                                                                                                                                                                                                                                                                   
+    </style>
+</head>
+
+<body>
+
+    <div id="left-panel">
+        <h2>Audio</h2>
+        <audio controls>
+            <source src="Happy Birthday Song!!!.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <h2>Video</h2>
+        <video controls width="250">
+            <source src="2024-01-09 10-37-33.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h2>Canvas</h2>
+        <canvas id="myCanvas" width="200" height="100"></canvas>
+    </div>
+
+    <div id="main-content">
+        <h1>My House using SVG</h1>
+        <iframe src="house.svg"></iframe>
+    </div>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+        // Create gradient
+        var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "white");
+
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 10, 150, 80);
+    </script>
+</body>
+
+</html>

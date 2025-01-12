@@ -1,0 +1,28 @@
+ <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+            <!-- Moon -->
+            <circle cx="300" cy="80" r="30" fill="yellow" stroke = "black" stroke-width="2"/>
+            <circle cx="315" cy="80" r="25" fill="white" />
+
+            <!-- Star -->
+            <polygon points="250,40 260,70 230,55 270,55 240,70" fill="gold" stroke="black" stroke-width="2"/>
+
+            <!-- House base -->
+            <rect x="120" y="150" width="160" height="150" fill="#8B4513" stroke = "black" stroke-width = "2"/>
+
+            <!-- Roof -->
+            <polygon points="120,150 280,150 200,80" fill="#B22222" stroke = "black" stroke-width = "2"/>
+
+            <!-- Door -->
+            <rect x="180" y="207" width="40" height="80" fill="#654321"  stroke = "black" stroke-width = "2"/>
+
+            <!-- Windows -->
+            <rect x="130" y="170" width="35" height="35" fill="skyblue" stroke = "black" stroke-width = "2"/>
+            <rect x="230" y="170" width="35" height="35" fill="skyblue" stroke = "black" stroke-width = "2"/>
+
+            <!-- Sun/Decoration on roof -->
+            <circle cx="200" cy="130" r="15" fill="yellow" stroke = "black" stroke-width = "2"/>
+
+            <!-- House step -->
+            <rect x="170" y="286" width="60" height="15" fill="gray" stroke = "black" stroke-width = "2"/>
+            <rect x="175" y="300" width="50" height="15" fill="gray" stroke = "black" stroke-width = "2"/>
+        </svg>

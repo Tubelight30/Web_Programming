@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22BCE1293</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        #experience{
+            display: none;
+        }
+        #skills{
+            display: none;
+        }
+        #education{
+            display: none;
+        }
+        header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+        }
+        nav {
+            background-color: #a7a7a7;
+            color: white;
+            padding: 20px;
+            width: 200px;
+            flex-shrink: 0;
+        }
+        nav a {
+            color: black;
+            display: block;
+            margin: 10px 0;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+        aside {
+            background-color: #f4f4f4;
+            padding: 20px;
+            width: 200px;
+            flex-shrink: 0;
+            margin-left: 40px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        figure {
+            text-align: center;
+        }
+        img{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <script src="script.js"></script>
+    <header>
+        <h1>My Resume</h1>
+    </header>
+    
+
+    <div class="container">
+        <nav>
+            <a href="#about" onclick="showAbout()">About Me</a>
+            <a href="#education" onclick="showEducation()">Education</a>
+            <a href="#experience" onclick="showExperience()">Experience</a>
+            <a href="#skills" onclick="showSkills()">Skills</a>
+            <a href="../q2/index.html" target="_blank">Media</a>
+        </nav>
+
+        <main>
+            <header>
+                <h1>Saumya Gupta</h1>
+                <p>Software Engineer | Problem Solver | Innovator</p>
+            </header>
+            <section id="about">
+                <h2>About Me</h2>
+                <p>A motivated software engineer with 5+ years of experience in building scalable web applications.</p>
+                <figure>
+                    <img src="saumya.jpg" alt="Saumya Gupta Profile">
+                    <figcaption>Saumya Gupta - Software Engineer</figcaption>
+                </figure>
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+                <p>Bachelor of Technology in Computer Science</p>
+                <p>VIT University, 2022-2026</p>
+            </section>
+
+            <section id="experience">
+                <h2>Experience</h2>
+                <article>
+                    <h3>Software Engineer</h3>
+                    <p>ABC Company, 2019-Present</p>
+                    <p>Developed scalable web applications and collaborated with cross-functional teams.</p>
+                </article>
+            </section>
+
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                </ul>
+            </section>
+        </main> 
+
+        <aside>
+            <h2>Quick Facts</h2>
+            <ul>
+                <li>Proficient in HTML5, CSS3, and JavaScript</li>
+                <li>5+ years of professional experience</li>
+                <li>Certified Scrum Master</li>
+                <li>Published 3 technical articles</li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Saumya Gupta. All rights reserved.</p>
+        <p>Contact: saumya@example.com</p>
+    </footer>
+</body>
+</html>

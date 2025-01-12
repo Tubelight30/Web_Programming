@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Greeting</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        header, footer {
+            background-color: #4682b4;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            width: 100%;
+        }
+
+        main {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        h2 { font-size: 1.8rem; margin-bottom: 1rem; }
+        p { margin-bottom: 1.5rem; line-height: 1.6; }
+
+        .greeting-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            object-fit: cover;
+        }
+
+        nav {
+            margin-top: 2rem;
+        }
+
+        .button {
+            display: inline-block;
+            color: #4682b4;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid #4682b4;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #4682b4;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 1rem; }
+            main { padding: 1.5rem; }
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to E-Greeting!</h1>
+    </header>
+
+    <div class="container">
+        <main>
+            <h2>Happy Holidays!</h2>
+            <p>May your days be filled with joy and laughter!</p>
+            <img 
+                src="fa20110708t3a.jpg" 
+                alt="Holiday greeting card" 
+                class="greeting-image"
+            >
+            <nav>
+                <a href="/q1/home.html" class="button">Back to Home</a>
+            </nav>
+        </main>
+    </div>
+</body>
+</html>
