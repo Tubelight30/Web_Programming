@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22BCE1293</title>
+</head>
+<body>
+    <form>
+
+        <label for="slider1">Ease of Use (0-10):</label>
+        <input type="range" id="slider1" name="easeOfUse" min="0" max="10" value="5" oninput="calculateTotal()">
+        <output id="output1" for="slider1">5</output>
+        <br><br>
+
+        <label for="slider2">Features (0-10):</label>
+        <input type="range" id="slider2" name="features" min="0" max="10" value="5" oninput="calculateTotal()">
+        <output id="output2" for="slider2">5</output>
+        <br><br>
+
+        <label for="slider3">Value for Money (0-10):</label>
+        <input type="range" id="slider3" name="valueForMoney" min="0" max="10" value="5" oninput="calculateTotal()">
+        <output id="output3" for="slider3">5</output>
+        <br><br>
+
+        <label for="totalOutput">Total Feedback:</label>
+        <output id="totalOutput" name="totalOutput">15</output>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
