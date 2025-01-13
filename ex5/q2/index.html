@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My House with SVG</title>
+    <title>22BCE1293</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -62,6 +62,20 @@
         // Fill with gradient
         ctx.fillStyle = grd;
         ctx.fillRect(10, 10, 150, 80);
+
+        var circleGrd = ctx.createRadialGradient(75, 50, 5, 75, 50, 20);
+        circleGrd.addColorStop(0, "#FFA500"); // Gold color
+        circleGrd.addColorStop(1, "#FFA500"); // Orange color
+
+        // Draw two overlapping circles with gradient
+        ctx.fillStyle = circleGrd;
+        ctx.beginPath();
+        ctx.arc(75, 50, 20, 0, 2 * Math.PI);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(85, 50, 20, 0, 2 * Math.PI);
+        ctx.fill();
     </script>
 </body>
 
