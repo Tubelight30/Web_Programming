@@ -1,0 +1,26 @@
+@keyframes practice {
+    0% {
+        background-color: yellow;
+        font-size: 50px;
+    }
+    50% {
+        
+        background-color: red;
+        font-size: 90px;
+    }
+    100% {
+        background-color: yellow;
+        font-size: 50px;
+    }
+}
+body{
+    background-color: black;
+}
+
+#animate {
+
+    animation-name: practice;
+    animation-duration: 4s;
+    /* position: relative; */
+    animation-iteration-count: infinite;
+}

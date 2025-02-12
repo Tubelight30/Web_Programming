@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22BCE1293</title>
+</head>
+<body>
+    <script>
+        function displayRegistrationNumber(regNo) {
+            document.write('<span style="border: 10px solid red; display: inline-block; padding: 5px; margin: 10px;">' + regNo + '</span>');
+        }
+        function displayName(name) {
+            const nameElement = document.createElement('span');
+            nameElement.style.border = '1px solid black';
+            nameElement.style.display = 'inline-block';
+            nameElement.style.padding = '5px';
+            nameElement.style.margin = '10px';
+            nameElement.style.color = 'red';
+            nameElement.innerHTML =  name;
+            document.body.appendChild(nameElement);
+        }
+
+        const regNo = "22BCE1293";
+        const name = "Saumya Gupta";
+        displayRegistrationNumber(regNo);
+        displayName(name);
+    </script>
+</body>
+</html>

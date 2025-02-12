@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function calculateServiceCharge() {
+            const ratePerHour = 45;
+            let hoursWorked = parseFloat(prompt("Enter the number of hours worked:"));
+            let costOfMaterials = parseFloat(prompt("Enter the cost of materials (in Rs.):"));
+            if (hoursWorked < 0 || costOfMaterials < 0) {
+                alert("Please enter valid numbers for hours worked and cost of materials.");
+                return;
+            }
+            let labourCost = ratePerHour * hoursWorked;
+            let totalCharge = labourCost + costOfMaterials;
+            alert(`Labour Cost: Rs.${labourCost.toFixed(2)}\nTotal Charge: Rs.${totalCharge.toFixed(2)}`);
+        }
+        calculateServiceCharge();
+    </script>
+</body>
+
+</html>

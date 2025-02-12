@@ -1,0 +1,69 @@
+.calculator{
+    background-color: lightblue;
+    padding: 10px;
+    width: 250px;
+}
+.button-number{
+    background-color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    box-shadow: 0px 3px #00000033;
+    border-radius: 5px;
+    height: 43px;
+    width: 60px;
+    border: none;
+    /* margin-top: 4px;     */
+    color: grey;
+    font-size: 15px;
+}
+
+.button-number:hover{
+    background-color: rgb(157, 156, 156);
+    cursor:pointer;
+}
+
+#number-1{
+    background-color: rgb(175, 136, 195);
+    color: white;
+    box-shadow: 0px 3px rgb(159, 74, 208);
+}
+
+#number-1:hover{
+    background-color: rgb(136, 36, 193);
+    cursor:pointer;
+    box-shadow: 0px 3px rgb(131, 4, 205);
+}
+
+#operator-c{
+    margin-top: 0px;
+    background-color: rgb(248, 162, 176);
+    color: white;
+    box-shadow: inset 0px -3px rgb(244, 127, 147) !important;
+}
+#operator-c:hover{
+    background-color: rgb(255, 127, 149);
+    color: white;
+    box-shadow: 0px 3px rgb(249, 82, 110);
+}
+
+#operator-equal{
+    background-color: rgb(249, 249, 106);  
+    box-shadow: 0px 3px rgb(149, 149, 1);  
+}
+#operator-equal:hover{
+    background-color: rgb(241, 241, 73);  
+    box-shadow: 0px 3px rgb(133, 133, 5);  
+
+}
+#display {
+    background-color: #a0cafd;
+    height: 40px;
+    width: 200px;
+    border: none;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: text;
+    box-shadow: inset 0px 3px #84b9f9;
+}

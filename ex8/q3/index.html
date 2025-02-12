@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let isStudent = confirm("Are you a student? Click 'OK' for Yes and 'Cancel' for No");
+
+        if(isStudent){
+            let regNum = prompt("Enter Register Number");
+            if(regNum){
+                alert("Registration Successful. Your Register Number is " + regNum);
+            }else{
+                alert("Enter Valid Registration Number");
+            }
+        }
+    </script>
+</body>
+</html>
