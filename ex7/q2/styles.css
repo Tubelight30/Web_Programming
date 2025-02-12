@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   background-image: url('background.jpg');
-  background-size: cover;
+  background-size: cover; 
   background-position: center;
   margin: 0;
   padding: 0;
@@ -10,13 +10,13 @@ body {
 .rainbow {
   text-align: center;
   font-size: 2em;
-  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-  -webkit-background-clip: text;
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  background-clip: text;
   color: transparent;
 }
 
 .description {
-  column-count: 2;
+  column-count: 3;
   column-gap: 20px;
   line-height: 30pt;
   padding: 20px;
@@ -26,9 +26,6 @@ body {
   position: relative;
   width: 100%;
   height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #ball {
@@ -36,6 +33,25 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: animateBall 3s infinite;
+}
+
+@keyframes animateBall {
+  0% {
+      transform: translate(0, 0) rotate(0deg) skew(0deg, 0deg);
+  }
+  25% {
+      transform: translate(100px, -50px) rotate(45deg) skew(10deg, 10deg);
+  }
+  50% {
+      transform: translate(200px, 0) rotate(90deg) skew(0deg, 0deg);
+  }
+  75% {
+      transform: translate(100px, 50px) rotate(135deg) skew(-10deg, -10deg);
+  }
+  100% {
+      transform: translate(0, 0) rotate(180deg) skew(0deg, 0deg);
+  }
 }
 
 .dog {
