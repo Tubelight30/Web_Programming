@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>22BCE1335</title>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <th>Temperature (°F)</th>
+        <th>Category</th>
+      </tr>
+      <!-- Table rows will be inserted here by JavaScript -->
+    </table>
+
+    <script>
+      const temperatures = [
+        55, 62, 68, 74, 59, 45, 41, 58, 60, 67, 65, 78, 82, 88, 91, 92, 90, 93,
+        87, 80, 78, 79, 72, 68, 61, 59, 55, 65,
+      ];
+
+      let hotDays = 0;
+      let pleasantDays = 0;
+      let coldDays = 0;
+
+      const table = document.querySelector("table");
+
+      temperatures.forEach((temp) => {
+        let category;
+        if (temp >= 85) {
+          hotDays++;
+          category = "HOT";
+        } else if (temp >= 60) {
+          pleasantDays++;
+          category = "PLEASANT";
+        } else {
+          coldDays++;
+          category = "COLD";
+        }
+
+        const row = document.createElement("tr");
+        row.innerHTML = `<td>${temp}</td><td>${category}</td>`;
+        table.appendChild(row);
+      });
+
+      console.log(`HOT days: ${hotDays}`);
+      console.log(`PLEASANT days: ${pleasantDays}`);
+      console.log(`COLD days: ${coldDays}`);
+    </script>
+  </body>
+</html>
