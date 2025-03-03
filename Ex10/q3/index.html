@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22BCE1293</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a0a78c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #6e755f;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            width: 300px;
+        }
+        .input-field, .quantity {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        .product {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .submit-btn {
+            background: #b88d5b;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Grocery Order Form</h2>
+        <form id="orderForm">
+            <label>Customer Name:</label>
+            <input type="text" id="name" class="input-field" required>
+
+            <label>Phone Number:</label>
+            <input type="text" id="phone" class="input-field" required>
+
+            <label>Email:</label>
+            <input type="email" id="email" class="input-field" required>
+
+            <h3>Products</h3>
+
+            <div class="product">
+                <input type="checkbox" id="apple" value="Apple" class="product-checkbox">
+                <label for="apple">Apple ($10/kg)</label>
+                <input type="number" id="appleQty" class="quantity" min="0" value="0">
+            </div>
+
+            <div class="product">
+                <input type="checkbox" id="banana" value="Banana" class="product-checkbox">
+                <label for="banana">Banana ($5/kg)</label>
+                <input type="number" id="bananaQty" class="quantity" min="0" value="0">
+            </div>
+
+            <div class="product">
+                <input type="checkbox" id="avocado" value="Avocado" class="product-checkbox">
+                <label for="avocado">Avocado ($7/kg)</label>
+                <input type="number" id="avocadoQty" class="quantity" min="0" value="0">
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("orderForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+            const email = document.getElementById("email").value;
+
+            const orderDetails = [];
+
+            const products = [
+                { name: "Apple", price: 10, qty: document.getElementById("appleQty").value, checked: document.getElementById("apple").checked },
+                { name: "Banana", price: 5, qty: document.getElementById("bananaQty").value, checked: document.getElementById("banana").checked },
+                { name: "Avocado", price: 7, qty: document.getElementById("avocadoQty").value, checked: document.getElementById("avocado").checked }
+            ];
+
+            products.forEach(product => {
+                if (product.checked && product.qty > 0) {
+                    orderDetails.push(`${product.name}:${product.qty}:${product.price}`);
+                }
+            });
+
+            const queryString = `name=${encodeURIComponent(name)}&phone=${encodeURIComponent(phone)}&email=${encodeURIComponent(email)}&order=${encodeURIComponent(orderDetails.join(","))}`;
+            window.location.href = `receipt.html?${queryString}`;
+        });
+    </script>
+
+</body>
+</html>

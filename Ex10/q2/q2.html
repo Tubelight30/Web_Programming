@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22BCE1293</title>
+    <style>
+        .input-field { padding: 5px; border: 1px solid black; }
+    </style>
+</head>
+<body>
+
+    <!-- (a) getElementById -->
+    <h1 id="main-title">Original Title</h1>
+
+    <!-- (b) getElementsByName -->
+    <input type="text" name="username" placeholder="Enter name">
+    <br><br>
+    
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+    <br><br>
+
+    <!-- (c) getElementsByTagName -->
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <!-- (d) getElementsByClassName -->
+    <input type="text" class="input-field" placeholder="Field 1">
+    <input type="text" class="input-field" placeholder="Field 2">
+    <br><br>
+
+    <!-- (e) querySelector -->
+    <p class="info">Info paragraph 1</p>
+    <p class="info">Info paragraph 2</p>
+    <p class="info">Info paragraph 3</p>
+
+    <!-- (f) querySelectorAll -->
+    <label>Hobbies:</label>
+    <input type="checkbox" class="hobby" value="Reading"> Reading
+    <input type="checkbox" class="hobby" value="Traveling"> Traveling
+    <input type="checkbox" class="hobby" value="Sports"> Sports
+    <br><br>
+
+    <script>
+        // (a) Using getElementById - Change h1 text
+        document.getElementById("main-title").textContent = "Updated Title";
+
+        // (b) Using getElementsByName
+        // Set the value of the input field
+        document.getElementsByName("username")[0].value = "John Doe";
+
+        // Get all radio buttons with name="gender" and print selected value
+        const genderRadios = document.getElementsByName("gender");
+        for (let radio of genderRadios) {
+            if (radio.checked) {
+                console.log("Selected Gender:", radio.value);
+            }
+        }
+
+        // (c) Using getElementsByTagName
+        // Count and print total <p> elements on the page
+        const paragraphs = document.getElementsByTagName("p");
+        console.log("Total number of <p> elements on the page:", paragraphs.length);
+
+        // Print all <li> elements inside <ul>
+        const listItems = document.getElementsByTagName("li");
+        for (let item of listItems) {
+            console.log("List Item:", item.textContent);
+        }
+
+        // (d) Using getElementsByClassName
+        // Change background color of all .input-field elements
+        const inputFields = document.getElementsByClassName("input-field");
+        for (let field of inputFields) {
+            field.style.backgroundColor = "lightblue";
+        }
+
+        // (e) Using querySelector
+        // Select first <p> with class "info" and update text
+        document.querySelector(".info").textContent = "This is the first info paragraph";
+
+        // Select first radio button with name="gender" and check it
+        document.querySelector("input[name='gender']").checked = true;
+
+        // (f) Using querySelectorAll
+        // Select all <p> with class "info" and print text
+        document.querySelectorAll(".info").forEach(p => console.log("Info Paragraph:", p.textContent));
+
+        // Select all checkboxes with class "hobby", check them and print checked values
+        document.querySelectorAll(".hobby").forEach(checkbox => {
+            checkbox.checked = true;
+            console.log("Checked Hobby:", checkbox.value);
+        });
+
+    </script>
+
+</body>
+</html>

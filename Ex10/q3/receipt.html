@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22BCE1293</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a0a78c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #6e755f;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            width: 300px;
+        }
+        .receipt {
+            background: white;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Order Receipt</h2>
+        <div class="receipt" id="receipt">
+            <p>Loading receipt...</p>
+        </div>
+    </div>
+
+    <script>
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const paramPairs = queryString.split("&");
+
+            paramPairs.forEach(pair => {
+                const [key, value] = pair.split("=");
+                params[decodeURIComponent(key)] = decodeURIComponent(value);
+            });
+
+            return params;
+        }
+
+        function generateReceipt() {
+            const params = getQueryParams();
+            const receiptDiv = document.getElementById("receipt");
+
+            let receiptHTML = `<p><strong>Name:</strong> ${params.name}</p>`;
+            receiptHTML += `<p><strong>Phone:</strong> ${params.phone}</p>`;
+            receiptHTML += `<p><strong>Email:</strong> ${params.email}</p>`;
+
+            if (params.order) {
+                const orders = params.order.split(",");
+                let total = 0;
+                receiptHTML += "<h3>Products Ordered:</h3><ul>";
+
+                orders.forEach(item => {
+                    const [product, qty, price] = item.split(":");
+                    const cost = qty * price;
+                    total += cost;
+                    receiptHTML += `<li>${product}: ${qty} kg - $${cost}</li>`;
+                });
+
+                receiptHTML += `</ul><h3>Total Cost: $${total}</h3>`;
+            } else {
+                receiptHTML += "<p>No items ordered.</p>";
+            }
+
+            receiptDiv.innerHTML = receiptHTML;
+        }
+
+        window.onload = generateReceipt;
+    </script>
+
+</body>
+</html>
