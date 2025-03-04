@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>22BCE1293</title>
+    <style>
+        .container {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            margin: 20px auto;
+        }
+
+        .box {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 2px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            color: white;
+        }
+
+        #box1 { 
+            background-color: #FF6B6B; 
+            top: 50px; 
+            left: 50px; 
+            z-index: 1;
+        }
+        
+        #box2 { 
+            background-color: #4ECDC4; 
+            top: 100px; 
+            left: 100px; 
+            z-index: 2;
+        }
+        
+        #box3 { 
+            background-color: #45B7D1; 
+            top: 150px; 
+            left: 150px; 
+            z-index: 3;
+        }
+
+        .controls {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .control-group {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+    </div>
+
+    <div class="controls">
+        <div class="control-group">
+            <label>Box 1 Z-Index: </label>
+            <input type="number" id="input1" value="1" 
+                   oninput="updateZIndex('box1', this.value)">
+            <span id="z1">1</span>
+        </div>
+        
+        <div class="control-group">
+            <label>Box 2 Z-Index: </label>
+            <input type="number" id="input2" value="2" 
+                   oninput="updateZIndex('box2', this.value)">
+            <span id="z2">2</span>
+        </div>
+        
+        <div class="control-group">
+            <label>Box 3 Z-Index: </label>
+            <input type="number" id="input3" value="3" 
+                   oninput="updateZIndex('box3', this.value)">
+            <span id="z3">3</span>
+        </div>
+    </div>
+
+    <script>
+        function updateZIndex(elementId, value) {
+            const element = document.getElementById(elementId);
+            const display = document.querySelector(`span#${elementId.replace('box', 'z')}`);
+            
+            if (element && display) {
+                element.style.zIndex = value;
+                display.textContent = value;
+            }
+        }
+
+        document.getElementById('z1').textContent = 1;
+        document.getElementById('z2').textContent = 2;
+        document.getElementById('z3').textContent = 3;
+    </script>
+</body>
+</html>
