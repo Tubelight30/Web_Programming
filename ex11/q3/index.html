@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22BCE1293</title>
+
+    <style>
+        form {
+            border-color: black;
+            border-style: solid;
+            border-width: 1px;
+        }
+
+        label {
+            /* display: block; */
+            margin-top: 10px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="myform" onsubmit="validateForm(event)">
+        <div class="header">
+            <h2>Test JavaScript Form Validation</h2>
+            <div id="timer">00:00</div>
+        </div>
+
+        <label>Name*</label>
+        <input type="text" name="name" id="name" maxlength="15">
+        <span id="nameError" class="error"></span>
+
+        <br><br>
+        <label for="address">Address</label>
+        <textarea id="address" name="address"></textarea>
+
+        <br><br>
+        <label for="zipCode">Zip Code*</label>
+        <input type="text" id="zipCode" name="zipCode">
+
+        <br><br>
+        <label for="country">Country*</label>
+        <select name="country" id="country">
+            <option value="">Please Select</option>
+            <option value="USA">USA</option>
+            <option value="India">India</option>
+        </select>
+
+        <br><br>
+        <label for="gender">Gender*</label>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+
+        <br><br>
+        <label for="preferences">Preferences*</label>
+        <input type="checkbox" id="red" name="preferences" value="Red">
+        <label for="red">Red</label>
+        <input type="checkbox" id="green" name="preferences" value="Green">
+        <label for="green">Green</label>
+        <input type="checkbox" id="blue" name="preferences" value="Blue">
+        <label for="blue">Blue</label>
+
+        <br><br>
+        <label for="phone">Phone*</label>
+        <input type="text" id="phone" name="phone" maxlength="10">
+
+        <br><br>
+        <label for="email">Email*</label>
+        <input type="text" id="email" name="email">
+
+        <br><br>
+        <label for="password">Password (6-8 characters)*</label>
+        <input type="password" id="password" name="password" minlength="8">
+
+        <br><br>
+        <label for="verifyPassword">Verify Password*</label>
+        <input type="password" id="verifyPassword" name="verifyPassword" minlength="8">
+        
+        <br><br>
+        <label for="panNo">PAN No:</label>
+        <input type="text" id="panNo" name="panNo">
+        
+        <br><br>
+        <button type="submit">SEND</button>
+        <button type="button" onclick="clearForm()">CLEAR</button>
+    </form>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
